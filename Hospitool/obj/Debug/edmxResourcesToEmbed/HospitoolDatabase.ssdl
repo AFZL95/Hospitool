@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HospitoolModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HospitoolModelStoreContainer">
+    <EntitySet Name="Admins" EntityType="HospitoolModel.Store.Admins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Beds" EntityType="HospitoolModel.Store.Beds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Doctors" EntityType="HospitoolModel.Store.Doctors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Labworkers" EntityType="HospitoolModel.Store.Labworkers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="HospitoolModel.Store.Patients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Receptionists" EntityType="HospitoolModel.Store.Receptionists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Labtests" EntityType="HospitoolModel.Store.Labtests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Appointments" EntityType="HospitoolModel.Store.Appointments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Payments" EntityType="HospitoolModel.Store.Payments" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Labtest_Labworker" Association="HospitoolModel.Store.FK_Labtest_Labworker">
+      <End Role="Labworker" EntitySet="Labworkers" />
+      <End Role="Labtest" EntitySet="Labtests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labtest_Patient" Association="HospitoolModel.Store.FK_Labtest_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Labtest" EntitySet="Labtests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Doctor" Association="HospitoolModel.Store.FK_Appointment_Doctor">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Patient" Association="HospitoolModel.Store.FK_Appointment_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Patient" Association="HospitoolModel.Store.FK_Payment_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="AdminPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdminName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdminSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdminEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="AdminMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Beds">
+    <Key>
+      <PropertyRef Name="BedID" />
+    </Key>
+    <Property Name="BedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="ReceptionistID" Type="int" Nullable="false" />
+    <Property Name="BedRentSDate" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="BedRentEDate" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="BedRegDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doctors">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DoctorSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DoctorTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="DoctorAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="DoctorAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="DoctorMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="DoctorMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="DoctorGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="DoctorAge" Type="int" Nullable="false" />
+    <Property Name="DoctorEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DoctorField" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DoctorPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Labworkers">
+    <Key>
+      <PropertyRef Name="LabworkerID" />
+    </Key>
+    <Property Name="LabworkerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabworkerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LabworkerSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LabworkerTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="LabworkerAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="LabworkerAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="LabworkerMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="LabworkerMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="LabworkerGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="LabworkerAge" Type="int" Nullable="false" />
+    <Property Name="LabworkerEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LabworkerPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PatientSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PatientTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="PatientAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="PatientAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="PatientMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="PatientMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="PatientGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="PatientDateAdmitted" Type="datetime" Nullable="true" />
+    <Property Name="PatientDateDischarged" Type="datetime" Nullable="true" />
+    <Property Name="PatientAge" Type="int" Nullable="false" />
+    <Property Name="PatientEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PatientIsDischarged" Type="bit" Nullable="true" />
+    <Property Name="PatientPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Receptionists">
+    <Key>
+      <PropertyRef Name="ReceptionistID" />
+    </Key>
+    <Property Name="ReceptionistID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReceptionistName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReceptionistSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReceptionistTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="ReceptionistAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="ReceptionistAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="ReceptionistMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="ReceptionistMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="ReceptionistGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="ReceptionistAge" Type="int" Nullable="false" />
+    <Property Name="ReceptionistEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ReceptionistPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Labtests">
+    <Key>
+      <PropertyRef Name="LabtestID" />
+    </Key>
+    <Property Name="LabtestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabtestDate" Type="datetime" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="LabworkerID" Type="int" Nullable="false" />
+    <Property Name="LabtestStoredFile" Type="varbinary(max)" Nullable="false" />
+    <Property Name="LabtestFiletype" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Appointments">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorID" Type="int" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="AppointmentDate" Type="datetime" Nullable="false" />
+    <Property Name="AppointmentStartdate" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="AppointmentEnddate" Type="varchar" Nullable="true" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentCredircard" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentCVV" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="PaymentExpiration" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentCost" Type="decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Labtest_Labworker">
+    <End Role="Labworker" Type="HospitoolModel.Store.Labworkers" Multiplicity="1" />
+    <End Role="Labtest" Type="HospitoolModel.Store.Labtests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Labworker">
+        <PropertyRef Name="LabworkerID" />
+      </Principal>
+      <Dependent Role="Labtest">
+        <PropertyRef Name="LabworkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labtest_Patient">
+    <End Role="Patient" Type="HospitoolModel.Store.Patients" Multiplicity="1" />
+    <End Role="Labtest" Type="HospitoolModel.Store.Labtests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Labtest">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Doctor">
+    <End Role="Doctor" Type="HospitoolModel.Store.Doctors" Multiplicity="1" />
+    <End Role="Appointment" Type="HospitoolModel.Store.Appointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Patient">
+    <End Role="Patient" Type="HospitoolModel.Store.Patients" Multiplicity="1" />
+    <End Role="Appointment" Type="HospitoolModel.Store.Appointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Patient">
+    <End Role="Patient" Type="HospitoolModel.Store.Patients" Multiplicity="1" />
+    <End Role="Payment" Type="HospitoolModel.Store.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

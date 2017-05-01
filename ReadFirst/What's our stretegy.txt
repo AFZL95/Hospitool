@@ -1,0 +1,8 @@
+we have two type of strategy for designing a system in RTM version of VS:
+1- Data First
+2- Model First
+
+we choose model first, because of we want to write a application with some tables that we created first. and work with them.
+despite of Model first streategy, whitch is writing the code, and then creating the required database from it.
+
+in EF model first stretegy we firstly create a new project and in the designer view of the VS we create the entities.

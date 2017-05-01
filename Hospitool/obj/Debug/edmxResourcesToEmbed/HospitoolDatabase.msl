@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HospitoolModelStoreContainer" CdmEntityContainer="HospitoolEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Admin)">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminTC" ColumnName="AdminTC" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminSurname" ColumnName="AdminSurname" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+          <ScalarProperty Name="AdminMobile1" ColumnName="AdminMobile1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beds">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Bed)">
+        <MappingFragment StoreEntitySet="Beds">
+          <ScalarProperty Name="BedID" ColumnName="BedID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="ReceptionistID" ColumnName="ReceptionistID" />
+          <ScalarProperty Name="BedRentSDate" ColumnName="BedRentSDate" />
+          <ScalarProperty Name="BedRentEDate" ColumnName="BedRentEDate" />
+          <ScalarProperty Name="BedRegDate" ColumnName="BedRegDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Doctor)">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+          <ScalarProperty Name="DoctorSurname" ColumnName="DoctorSurname" />
+          <ScalarProperty Name="DoctorTC" ColumnName="DoctorTC" />
+          <ScalarProperty Name="DoctorAddress1" ColumnName="DoctorAddress1" />
+          <ScalarProperty Name="DoctorAddress2" ColumnName="DoctorAddress2" />
+          <ScalarProperty Name="DoctorMobile1" ColumnName="DoctorMobile1" />
+          <ScalarProperty Name="DoctorMobile2" ColumnName="DoctorMobile2" />
+          <ScalarProperty Name="DoctorGender" ColumnName="DoctorGender" />
+          <ScalarProperty Name="DoctorAge" ColumnName="DoctorAge" />
+          <ScalarProperty Name="DoctorEmail" ColumnName="DoctorEmail" />
+          <ScalarProperty Name="DoctorField" ColumnName="DoctorField" />
+          <ScalarProperty Name="DoctorPassword" ColumnName="DoctorPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labworkers">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Labworker)">
+        <MappingFragment StoreEntitySet="Labworkers">
+          <ScalarProperty Name="LabworkerID" ColumnName="LabworkerID" />
+          <ScalarProperty Name="LabworkerName" ColumnName="LabworkerName" />
+          <ScalarProperty Name="LabworkerSurname" ColumnName="LabworkerSurname" />
+          <ScalarProperty Name="LabworkerTC" ColumnName="LabworkerTC" />
+          <ScalarProperty Name="LabworkerAddress1" ColumnName="LabworkerAddress1" />
+          <ScalarProperty Name="LabworkerAddress2" ColumnName="LabworkerAddress2" />
+          <ScalarProperty Name="LabworkerMobile1" ColumnName="LabworkerMobile1" />
+          <ScalarProperty Name="LabworkerMobile2" ColumnName="LabworkerMobile2" />
+          <ScalarProperty Name="LabworkerGender" ColumnName="LabworkerGender" />
+          <ScalarProperty Name="LabworkerAge" ColumnName="LabworkerAge" />
+          <ScalarProperty Name="LabworkerEmail" ColumnName="LabworkerEmail" />
+          <ScalarProperty Name="LabworkerPassword" ColumnName="LabworkerPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Patient)">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="PatientSurname" ColumnName="PatientSurname" />
+          <ScalarProperty Name="PatientTC" ColumnName="PatientTC" />
+          <ScalarProperty Name="PatientAddress1" ColumnName="PatientAddress1" />
+          <ScalarProperty Name="PatientAddress2" ColumnName="PatientAddress2" />
+          <ScalarProperty Name="PatientMobile1" ColumnName="PatientMobile1" />
+          <ScalarProperty Name="PatientMobile2" ColumnName="PatientMobile2" />
+          <ScalarProperty Name="PatientGender" ColumnName="PatientGender" />
+          <ScalarProperty Name="PatientDateAdmitted" ColumnName="PatientDateAdmitted" />
+          <ScalarProperty Name="PatientDateDischarged" ColumnName="PatientDateDischarged" />
+          <ScalarProperty Name="PatientAge" ColumnName="PatientAge" />
+          <ScalarProperty Name="PatientEmail" ColumnName="PatientEmail" />
+          <ScalarProperty Name="PatientIsDischarged" ColumnName="PatientIsDischarged" />
+          <ScalarProperty Name="PatientPassword" ColumnName="PatientPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Receptionists">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Receptionist)">
+        <MappingFragment StoreEntitySet="Receptionists">
+          <ScalarProperty Name="ReceptionistID" ColumnName="ReceptionistID" />
+          <ScalarProperty Name="ReceptionistName" ColumnName="ReceptionistName" />
+          <ScalarProperty Name="ReceptionistSurname" ColumnName="ReceptionistSurname" />
+          <ScalarProperty Name="ReceptionistTC" ColumnName="ReceptionistTC" />
+          <ScalarProperty Name="ReceptionistAddress1" ColumnName="ReceptionistAddress1" />
+          <ScalarProperty Name="ReceptionistAddress2" ColumnName="ReceptionistAddress2" />
+          <ScalarProperty Name="ReceptionistMobile1" ColumnName="ReceptionistMobile1" />
+          <ScalarProperty Name="ReceptionistMobile2" ColumnName="ReceptionistMobile2" />
+          <ScalarProperty Name="ReceptionistGender" ColumnName="ReceptionistGender" />
+          <ScalarProperty Name="ReceptionistAge" ColumnName="ReceptionistAge" />
+          <ScalarProperty Name="ReceptionistEmail" ColumnName="ReceptionistEmail" />
+          <ScalarProperty Name="ReceptionistPassword" ColumnName="ReceptionistPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labtests">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Labtest)">
+        <MappingFragment StoreEntitySet="Labtests">
+          <ScalarProperty Name="LabtestID" ColumnName="LabtestID" />
+          <ScalarProperty Name="LabtestDate" ColumnName="LabtestDate" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="LabworkerID" ColumnName="LabworkerID" />
+          <ScalarProperty Name="LabtestStoredFile" ColumnName="LabtestStoredFile" />
+          <ScalarProperty Name="LabtestFiletype" ColumnName="LabtestFiletype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Appointment)">
+        <MappingFragment StoreEntitySet="Appointments">
+          <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="AppointmentDate" ColumnName="AppointmentDate" />
+          <ScalarProperty Name="AppointmentStartdate" ColumnName="AppointmentStartdate" />
+          <ScalarProperty Name="AppointmentEnddate" ColumnName="AppointmentEnddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Payment)">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+          <ScalarProperty Name="PaymentSurname" ColumnName="PaymentSurname" />
+          <ScalarProperty Name="PaymentCredircard" ColumnName="PaymentCredircard" />
+          <ScalarProperty Name="PaymentCVV" ColumnName="PaymentCVV" />
+          <ScalarProperty Name="PaymentExpiration" ColumnName="PaymentExpiration" />
+          <ScalarProperty Name="PaymentCost" ColumnName="PaymentCost" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

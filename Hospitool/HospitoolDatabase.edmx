@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HospitoolModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HospitoolModelStoreContainer">
+    <EntitySet Name="Admins" EntityType="HospitoolModel.Store.Admins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Beds" EntityType="HospitoolModel.Store.Beds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Doctors" EntityType="HospitoolModel.Store.Doctors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Labworkers" EntityType="HospitoolModel.Store.Labworkers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="HospitoolModel.Store.Patients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Receptionists" EntityType="HospitoolModel.Store.Receptionists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Labtests" EntityType="HospitoolModel.Store.Labtests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Appointments" EntityType="HospitoolModel.Store.Appointments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Payments" EntityType="HospitoolModel.Store.Payments" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Labtest_Labworker" Association="HospitoolModel.Store.FK_Labtest_Labworker">
+      <End Role="Labworker" EntitySet="Labworkers" />
+      <End Role="Labtest" EntitySet="Labtests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labtest_Patient" Association="HospitoolModel.Store.FK_Labtest_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Labtest" EntitySet="Labtests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Doctor" Association="HospitoolModel.Store.FK_Appointment_Doctor">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Patient" Association="HospitoolModel.Store.FK_Appointment_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Patient" Association="HospitoolModel.Store.FK_Payment_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="AdminPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdminName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdminSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdminEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="AdminMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Beds">
+    <Key>
+      <PropertyRef Name="BedID" />
+    </Key>
+    <Property Name="BedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="ReceptionistID" Type="int" Nullable="false" />
+    <Property Name="BedRentSDate" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="BedRentEDate" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="BedRegDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doctors">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DoctorSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DoctorTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="DoctorAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="DoctorAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="DoctorMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="DoctorMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="DoctorGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="DoctorAge" Type="int" Nullable="false" />
+    <Property Name="DoctorEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DoctorField" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DoctorPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Labworkers">
+    <Key>
+      <PropertyRef Name="LabworkerID" />
+    </Key>
+    <Property Name="LabworkerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabworkerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LabworkerSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LabworkerTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="LabworkerAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="LabworkerAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="LabworkerMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="LabworkerMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="LabworkerGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="LabworkerAge" Type="int" Nullable="false" />
+    <Property Name="LabworkerEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LabworkerPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PatientSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PatientTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="PatientAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="PatientAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="PatientMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="PatientMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="PatientGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="PatientDateAdmitted" Type="datetime" Nullable="true" />
+    <Property Name="PatientDateDischarged" Type="datetime" Nullable="true" />
+    <Property Name="PatientAge" Type="int" Nullable="false" />
+    <Property Name="PatientEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PatientIsDischarged" Type="bit" Nullable="true" />
+    <Property Name="PatientPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Receptionists">
+    <Key>
+      <PropertyRef Name="ReceptionistID" />
+    </Key>
+    <Property Name="ReceptionistID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReceptionistName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReceptionistSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReceptionistTC" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="ReceptionistAddress1" Type="nvarchar" Nullable="false" MaxLength="400" />
+    <Property Name="ReceptionistAddress2" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="ReceptionistMobile1" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="ReceptionistMobile2" Type="nvarchar" Nullable="true" MaxLength="25" />
+    <Property Name="ReceptionistGender" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="ReceptionistAge" Type="int" Nullable="false" />
+    <Property Name="ReceptionistEmail" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ReceptionistPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Labtests">
+    <Key>
+      <PropertyRef Name="LabtestID" />
+    </Key>
+    <Property Name="LabtestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabtestDate" Type="datetime" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="LabworkerID" Type="int" Nullable="false" />
+    <Property Name="LabtestStoredFile" Type="varbinary(max)" Nullable="false" />
+    <Property Name="LabtestFiletype" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Appointments">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorID" Type="int" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="AppointmentDate" Type="datetime" Nullable="false" />
+    <Property Name="AppointmentStartdate" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="AppointmentEnddate" Type="varchar" Nullable="true" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentSurname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentCredircard" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentCVV" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="PaymentExpiration" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaymentCost" Type="decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Labtest_Labworker">
+    <End Role="Labworker" Type="HospitoolModel.Store.Labworkers" Multiplicity="1" />
+    <End Role="Labtest" Type="HospitoolModel.Store.Labtests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Labworker">
+        <PropertyRef Name="LabworkerID" />
+      </Principal>
+      <Dependent Role="Labtest">
+        <PropertyRef Name="LabworkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labtest_Patient">
+    <End Role="Patient" Type="HospitoolModel.Store.Patients" Multiplicity="1" />
+    <End Role="Labtest" Type="HospitoolModel.Store.Labtests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Labtest">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Doctor">
+    <End Role="Doctor" Type="HospitoolModel.Store.Doctors" Multiplicity="1" />
+    <End Role="Appointment" Type="HospitoolModel.Store.Appointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Patient">
+    <End Role="Patient" Type="HospitoolModel.Store.Patients" Multiplicity="1" />
+    <End Role="Appointment" Type="HospitoolModel.Store.Appointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Patient">
+    <End Role="Patient" Type="HospitoolModel.Store.Patients" Multiplicity="1" />
+    <End Role="Payment" Type="HospitoolModel.Store.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HospitoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdminSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdminEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdminMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bed">
+          <Key>
+            <PropertyRef Name="BedID" />
+          </Key>
+          <Property Name="BedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientID" Type="Int32" Nullable="false" />
+          <Property Name="ReceptionistID" Type="Int32" Nullable="false" />
+          <Property Name="BedRentSDate" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BedRentEDate" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BedRegDate" Type="DateTime" Nullable="false" Precision="7" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DoctorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="DoctorMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="DoctorGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorAge" Type="Int32" Nullable="false" />
+          <Property Name="DoctorEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorField" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Appointments" Relationship="HospitoolModel.FK_Appointment_Doctor" FromRole="Doctor" ToRole="Appointment" />
+        </EntityType>
+        <EntityType Name="Labworker">
+          <Key>
+            <PropertyRef Name="LabworkerID" />
+          </Key>
+          <Property Name="LabworkerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LabworkerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LabworkerSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LabworkerTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LabworkerAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LabworkerAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="LabworkerMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LabworkerMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="LabworkerGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LabworkerAge" Type="Int32" Nullable="false" />
+          <Property Name="LabworkerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LabworkerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Labtests" Relationship="HospitoolModel.FK_Labtest_Labworker" FromRole="Labworker" ToRole="Labtest" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="PatientID" />
+          </Key>
+          <Property Name="PatientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PatientSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PatientTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PatientAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PatientAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="PatientMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PatientMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="PatientGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PatientDateAdmitted" Type="DateTime" Precision="7" />
+          <Property Name="PatientDateDischarged" Type="DateTime" Precision="7" />
+          <Property Name="PatientAge" Type="Int32" Nullable="false" />
+          <Property Name="PatientEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PatientIsDischarged" Type="Boolean" />
+          <Property Name="PatientPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Labtests" Relationship="HospitoolModel.FK_Labtest_Patient" FromRole="Patient" ToRole="Labtest" />
+          <NavigationProperty Name="Appointments" Relationship="HospitoolModel.FK_Appointment_Patient" FromRole="Patient" ToRole="Appointment" />
+          <NavigationProperty Name="Payments" Relationship="HospitoolModel.FK_Payment_Patient" FromRole="Patient" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="Receptionist">
+          <Key>
+            <PropertyRef Name="ReceptionistID" />
+          </Key>
+          <Property Name="ReceptionistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReceptionistName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReceptionistSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReceptionistTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReceptionistAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReceptionistAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ReceptionistMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReceptionistMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="ReceptionistGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReceptionistAge" Type="Int32" Nullable="false" />
+          <Property Name="ReceptionistEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReceptionistPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HospitoolEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Beds" EntityType="Self.Bed" />
+          <EntitySet Name="Doctors" EntityType="Self.Doctor" />
+          <EntitySet Name="Labworkers" EntityType="Self.Labworker" />
+          <EntitySet Name="Patients" EntityType="Self.Patient" />
+          <EntitySet Name="Receptionists" EntityType="Self.Receptionist" />
+          <EntitySet Name="Labtests" EntityType="HospitoolModel.Labtest" />
+          <AssociationSet Name="FK_Labtest_Labworker" Association="HospitoolModel.FK_Labtest_Labworker">
+            <End Role="Labworker" EntitySet="Labworkers" />
+            <End Role="Labtest" EntitySet="Labtests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Labtest_Patient" Association="HospitoolModel.FK_Labtest_Patient">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Labtest" EntitySet="Labtests" />
+          </AssociationSet>
+          <EntitySet Name="Appointments" EntityType="HospitoolModel.Appointment" />
+          <AssociationSet Name="FK_Appointment_Doctor" Association="HospitoolModel.FK_Appointment_Doctor">
+            <End Role="Doctor" EntitySet="Doctors" />
+            <End Role="Appointment" EntitySet="Appointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointment_Patient" Association="HospitoolModel.FK_Appointment_Patient">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Appointment" EntitySet="Appointments" />
+          </AssociationSet>
+          <EntitySet Name="Payments" EntityType="HospitoolModel.Payment" />
+          <AssociationSet Name="FK_Payment_Patient" Association="HospitoolModel.FK_Payment_Patient">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Labtest">
+          <Key>
+            <PropertyRef Name="LabtestID" />
+          </Key>
+          <Property Name="LabtestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LabtestDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="PatientID" Type="Int32" Nullable="false" />
+          <Property Name="LabworkerID" Type="Int32" Nullable="false" />
+          <Property Name="LabtestStoredFile" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LabtestFiletype" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Labworker" Relationship="HospitoolModel.FK_Labtest_Labworker" FromRole="Labtest" ToRole="Labworker" />
+          <NavigationProperty Name="Patient" Relationship="HospitoolModel.FK_Labtest_Patient" FromRole="Labtest" ToRole="Patient" />
+        </EntityType>
+        <Association Name="FK_Labtest_Labworker">
+          <End Type="HospitoolModel.Labworker" Role="Labworker" Multiplicity="1" />
+          <End Type="HospitoolModel.Labtest" Role="Labtest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Labworker">
+              <PropertyRef Name="LabworkerID" />
+            </Principal>
+            <Dependent Role="Labtest">
+              <PropertyRef Name="LabworkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Labtest_Patient">
+          <End Type="HospitoolModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="HospitoolModel.Labtest" Role="Labtest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="PatientID" />
+            </Principal>
+            <Dependent Role="Labtest">
+              <PropertyRef Name="PatientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Appointment">
+          <Key>
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="AppointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DoctorID" Type="Int32" Nullable="false" />
+          <Property Name="PatientID" Type="Int32" Nullable="false" />
+          <Property Name="AppointmentDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AppointmentStartdate" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AppointmentEnddate" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Doctor" Relationship="HospitoolModel.FK_Appointment_Doctor" FromRole="Appointment" ToRole="Doctor" />
+          <NavigationProperty Name="Patient" Relationship="HospitoolModel.FK_Appointment_Patient" FromRole="Appointment" ToRole="Patient" />
+        </EntityType>
+        <Association Name="FK_Appointment_Doctor">
+          <End Type="HospitoolModel.Doctor" Role="Doctor" Multiplicity="1" />
+          <End Type="HospitoolModel.Appointment" Role="Appointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="Appointment">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointment_Patient">
+          <End Type="HospitoolModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="HospitoolModel.Appointment" Role="Appointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="PatientID" />
+            </Principal>
+            <Dependent Role="Appointment">
+              <PropertyRef Name="PatientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="PaymentID" />
+          </Key>
+          <Property Name="PaymentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentSurname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentCredircard" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentCVV" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentExpiration" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="PatientID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Patient" Relationship="HospitoolModel.FK_Payment_Patient" FromRole="Payment" ToRole="Patient" />
+        </EntityType>
+        <Association Name="FK_Payment_Patient">
+          <End Type="HospitoolModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="HospitoolModel.Payment" Role="Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="PatientID" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="PatientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HospitoolModelStoreContainer" CdmEntityContainer="HospitoolEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Admin)">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminTC" ColumnName="AdminTC" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminSurname" ColumnName="AdminSurname" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+          <ScalarProperty Name="AdminMobile1" ColumnName="AdminMobile1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beds">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Bed)">
+        <MappingFragment StoreEntitySet="Beds">
+          <ScalarProperty Name="BedID" ColumnName="BedID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="ReceptionistID" ColumnName="ReceptionistID" />
+          <ScalarProperty Name="BedRentSDate" ColumnName="BedRentSDate" />
+          <ScalarProperty Name="BedRentEDate" ColumnName="BedRentEDate" />
+          <ScalarProperty Name="BedRegDate" ColumnName="BedRegDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Doctor)">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+          <ScalarProperty Name="DoctorSurname" ColumnName="DoctorSurname" />
+          <ScalarProperty Name="DoctorTC" ColumnName="DoctorTC" />
+          <ScalarProperty Name="DoctorAddress1" ColumnName="DoctorAddress1" />
+          <ScalarProperty Name="DoctorAddress2" ColumnName="DoctorAddress2" />
+          <ScalarProperty Name="DoctorMobile1" ColumnName="DoctorMobile1" />
+          <ScalarProperty Name="DoctorMobile2" ColumnName="DoctorMobile2" />
+          <ScalarProperty Name="DoctorGender" ColumnName="DoctorGender" />
+          <ScalarProperty Name="DoctorAge" ColumnName="DoctorAge" />
+          <ScalarProperty Name="DoctorEmail" ColumnName="DoctorEmail" />
+          <ScalarProperty Name="DoctorField" ColumnName="DoctorField" />
+          <ScalarProperty Name="DoctorPassword" ColumnName="DoctorPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labworkers">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Labworker)">
+        <MappingFragment StoreEntitySet="Labworkers">
+          <ScalarProperty Name="LabworkerID" ColumnName="LabworkerID" />
+          <ScalarProperty Name="LabworkerName" ColumnName="LabworkerName" />
+          <ScalarProperty Name="LabworkerSurname" ColumnName="LabworkerSurname" />
+          <ScalarProperty Name="LabworkerTC" ColumnName="LabworkerTC" />
+          <ScalarProperty Name="LabworkerAddress1" ColumnName="LabworkerAddress1" />
+          <ScalarProperty Name="LabworkerAddress2" ColumnName="LabworkerAddress2" />
+          <ScalarProperty Name="LabworkerMobile1" ColumnName="LabworkerMobile1" />
+          <ScalarProperty Name="LabworkerMobile2" ColumnName="LabworkerMobile2" />
+          <ScalarProperty Name="LabworkerGender" ColumnName="LabworkerGender" />
+          <ScalarProperty Name="LabworkerAge" ColumnName="LabworkerAge" />
+          <ScalarProperty Name="LabworkerEmail" ColumnName="LabworkerEmail" />
+          <ScalarProperty Name="LabworkerPassword" ColumnName="LabworkerPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Patient)">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="PatientSurname" ColumnName="PatientSurname" />
+          <ScalarProperty Name="PatientTC" ColumnName="PatientTC" />
+          <ScalarProperty Name="PatientAddress1" ColumnName="PatientAddress1" />
+          <ScalarProperty Name="PatientAddress2" ColumnName="PatientAddress2" />
+          <ScalarProperty Name="PatientMobile1" ColumnName="PatientMobile1" />
+          <ScalarProperty Name="PatientMobile2" ColumnName="PatientMobile2" />
+          <ScalarProperty Name="PatientGender" ColumnName="PatientGender" />
+          <ScalarProperty Name="PatientDateAdmitted" ColumnName="PatientDateAdmitted" />
+          <ScalarProperty Name="PatientDateDischarged" ColumnName="PatientDateDischarged" />
+          <ScalarProperty Name="PatientAge" ColumnName="PatientAge" />
+          <ScalarProperty Name="PatientEmail" ColumnName="PatientEmail" />
+          <ScalarProperty Name="PatientIsDischarged" ColumnName="PatientIsDischarged" />
+          <ScalarProperty Name="PatientPassword" ColumnName="PatientPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Receptionists">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Receptionist)">
+        <MappingFragment StoreEntitySet="Receptionists">
+          <ScalarProperty Name="ReceptionistID" ColumnName="ReceptionistID" />
+          <ScalarProperty Name="ReceptionistName" ColumnName="ReceptionistName" />
+          <ScalarProperty Name="ReceptionistSurname" ColumnName="ReceptionistSurname" />
+          <ScalarProperty Name="ReceptionistTC" ColumnName="ReceptionistTC" />
+          <ScalarProperty Name="ReceptionistAddress1" ColumnName="ReceptionistAddress1" />
+          <ScalarProperty Name="ReceptionistAddress2" ColumnName="ReceptionistAddress2" />
+          <ScalarProperty Name="ReceptionistMobile1" ColumnName="ReceptionistMobile1" />
+          <ScalarProperty Name="ReceptionistMobile2" ColumnName="ReceptionistMobile2" />
+          <ScalarProperty Name="ReceptionistGender" ColumnName="ReceptionistGender" />
+          <ScalarProperty Name="ReceptionistAge" ColumnName="ReceptionistAge" />
+          <ScalarProperty Name="ReceptionistEmail" ColumnName="ReceptionistEmail" />
+          <ScalarProperty Name="ReceptionistPassword" ColumnName="ReceptionistPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labtests">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Labtest)">
+        <MappingFragment StoreEntitySet="Labtests">
+          <ScalarProperty Name="LabtestID" ColumnName="LabtestID" />
+          <ScalarProperty Name="LabtestDate" ColumnName="LabtestDate" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="LabworkerID" ColumnName="LabworkerID" />
+          <ScalarProperty Name="LabtestStoredFile" ColumnName="LabtestStoredFile" />
+          <ScalarProperty Name="LabtestFiletype" ColumnName="LabtestFiletype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Appointment)">
+        <MappingFragment StoreEntitySet="Appointments">
+          <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="AppointmentDate" ColumnName="AppointmentDate" />
+          <ScalarProperty Name="AppointmentStartdate" ColumnName="AppointmentStartdate" />
+          <ScalarProperty Name="AppointmentEnddate" ColumnName="AppointmentEnddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Payment)">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+          <ScalarProperty Name="PaymentSurname" ColumnName="PaymentSurname" />
+          <ScalarProperty Name="PaymentCredircard" ColumnName="PaymentCredircard" />
+          <ScalarProperty Name="PaymentCVV" ColumnName="PaymentCVV" />
+          <ScalarProperty Name="PaymentExpiration" ColumnName="PaymentExpiration" />
+          <ScalarProperty Name="PaymentCost" ColumnName="PaymentCost" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
