@@ -40,18 +40,19 @@
             // 
             // btnAppointments
             // 
-            this.btnAppointments.Location = new System.Drawing.Point(152, 250);
+            this.btnAppointments.Location = new System.Drawing.Point(152, 196);
             this.btnAppointments.Name = "btnAppointments";
+            this.btnAppointments.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAppointments.Size = new System.Drawing.Size(137, 23);
             this.btnAppointments.TabIndex = 0;
-            this.btnAppointments.Text = "Show My Appointments";
+            this.btnAppointments.Text = "قرار ملاقات های من";
             this.btnAppointments.UseVisualStyleBackColor = true;
             this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(365, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
@@ -59,18 +60,19 @@
             // 
             // btnLabtestResult
             // 
-            this.btnLabtestResult.Location = new System.Drawing.Point(152, 462);
+            this.btnLabtestResult.Location = new System.Drawing.Point(152, 408);
             this.btnLabtestResult.Name = "btnLabtestResult";
+            this.btnLabtestResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnLabtestResult.Size = new System.Drawing.Size(137, 23);
             this.btnLabtestResult.TabIndex = 6;
-            this.btnLabtestResult.Text = "See Labtest Results";
+            this.btnLabtestResult.Text = "نتایج آزمایش بیماران";
             this.btnLabtestResult.UseVisualStyleBackColor = true;
             this.btnLabtestResult.Click += new System.EventHandler(this.btnLabtestResult_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hospitool.Properties.Resources.test_tube;
-            this.pictureBox2.Location = new System.Drawing.Point(150, 316);
+            this.pictureBox2.Location = new System.Drawing.Point(150, 262);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(139, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,7 +82,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hospitool.Properties.Resources.calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(150, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(150, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(139, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,11 +91,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(181, 536);
+            this.btnExit.Location = new System.Drawing.Point(180, 486);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 18;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "خروج";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -102,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(470, 571);
+            this.ClientSize = new System.Drawing.Size(470, 521);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLabtestResult);

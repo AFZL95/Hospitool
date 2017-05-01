@@ -63,17 +63,17 @@
             // 
             this.cbDoctors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDoctors.FormattingEnabled = true;
-            this.cbDoctors.Location = new System.Drawing.Point(197, 235);
+            this.cbDoctors.Location = new System.Drawing.Point(174, 235);
             this.cbDoctors.Name = "cbDoctors";
-            this.cbDoctors.Size = new System.Drawing.Size(121, 21);
+            this.cbDoctors.Size = new System.Drawing.Size(139, 21);
             this.cbDoctors.TabIndex = 0;
             this.cbDoctors.SelectedIndexChanged += new System.EventHandler(this.cbDoctors_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(160, 303);
+            this.dateTimePicker1.Location = new System.Drawing.Point(128, 318);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(232, 20);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -81,38 +81,41 @@
             // 
             this.cbField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbField.FormattingEnabled = true;
-            this.cbField.Location = new System.Drawing.Point(197, 179);
+            this.cbField.Location = new System.Drawing.Point(174, 179);
             this.cbField.Name = "cbField";
-            this.cbField.Size = new System.Drawing.Size(121, 21);
+            this.cbField.Size = new System.Drawing.Size(139, 21);
             this.cbField.TabIndex = 3;
             this.cbField.SelectedIndexChanged += new System.EventHandler(this.cbField_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 182);
+            this.label1.Location = new System.Drawing.Point(331, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Doctor\'s Field:";
+            this.label1.Text = "تخصص پزشک:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(117, 238);
+            this.label2.Location = new System.Drawing.Point(331, 243);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Doctor\'s Name:";
+            this.label2.Text = "نام پزشک:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 309);
+            this.label3.Location = new System.Drawing.Point(209, 292);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Day:";
+            this.label3.Text = "تاریخ ملاقات:";
             // 
             // button1
             // 
@@ -317,11 +320,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(143, 520);
+            this.label4.Location = new System.Drawing.Point(53, 520);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 13);
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(395, 13);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Click on the hour to make an appointment.";
+            this.label4.Text = "پس از انتخاب تخصص و نام پزشک مورد نظرتان روی ساعات سبز (وقت خالی) کلیک کنید.";
             // 
             // pictureBox1
             // 

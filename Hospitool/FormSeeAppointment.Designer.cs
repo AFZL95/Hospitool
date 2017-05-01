@@ -98,7 +98,7 @@
             // 
             this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(250)))), ((int)(((byte)(0)))));
             this.button21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button21.Location = new System.Drawing.Point(65, 323);
+            this.button21.Location = new System.Drawing.Point(16, 323);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(27, 28);
             this.button21.TabIndex = 50;
@@ -107,20 +107,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 331);
+            this.label1.Location = new System.Drawing.Point(49, 331);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 49;
-            this.label1.Text = "Full sections";
+            this.label1.Text = "زمان های رزرو شده:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(259, 331);
+            this.label2.Location = new System.Drawing.Point(241, 331);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(139, 13);
             this.label2.TabIndex = 52;
-            this.label2.Text = "Empty sections";
+            this.label2.Text = "زمان های خالی و در دسترس:";
             // 
             // button20
             // 
@@ -136,7 +138,7 @@
             // 
             this.button22.BackColor = System.Drawing.Color.Red;
             this.button22.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button22.Location = new System.Drawing.Point(226, 323);
+            this.button22.Location = new System.Drawing.Point(208, 323);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(27, 28);
             this.button22.TabIndex = 51;
@@ -335,11 +337,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 88);
+            this.label3.Location = new System.Drawing.Point(317, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Day:";
+            this.label3.Text = "تاریخ:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dateTimePicker1
             // 

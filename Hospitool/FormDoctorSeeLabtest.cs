@@ -74,7 +74,7 @@ namespace Hospitool
             }
             else
             {
-                MessageBox.Show("There is no available lab test.");
+                MessageBox.Show("نتیجه آزمایشی وجود ندارد.");
             }
         }
     }

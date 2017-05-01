@@ -41,17 +41,18 @@
             // 
             // btnChooseFile
             // 
-            this.btnChooseFile.Location = new System.Drawing.Point(75, 262);
+            this.btnChooseFile.Location = new System.Drawing.Point(162, 261);
             this.btnChooseFile.Name = "btnChooseFile";
+            this.btnChooseFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnChooseFile.Size = new System.Drawing.Size(75, 23);
             this.btnChooseFile.TabIndex = 0;
-            this.btnChooseFile.Text = "Choose File:";
+            this.btnChooseFile.Text = "انتخاب فایل";
             this.btnChooseFile.UseVisualStyleBackColor = true;
             this.btnChooseFile.Click += new System.EventHandler(this.btnChooseFile_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 264);
+            this.textBox1.Location = new System.Drawing.Point(44, 264);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             // txtPatientID
             // 
-            this.txtPatientID.Location = new System.Drawing.Point(168, 316);
+            this.txtPatientID.Location = new System.Drawing.Point(44, 312);
             this.txtPatientID.Name = "txtPatientID";
             this.txtPatientID.Size = new System.Drawing.Size(100, 20);
             this.txtPatientID.TabIndex = 3;
@@ -76,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 319);
+            this.label2.Location = new System.Drawing.Point(168, 319);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 4;
@@ -84,11 +85,11 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(168, 381);
+            this.btnUpload.Location = new System.Drawing.Point(44, 381);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(100, 23);
+            this.btnUpload.Size = new System.Drawing.Size(193, 23);
             this.btnUpload.TabIndex = 5;
-            this.btnUpload.Text = "Upload Labtest";
+            this.btnUpload.Text = "بارگذاری نتایج ازمایش";
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
@@ -99,7 +100,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hospitool.Properties.Resources.adobe_acrobat_pdf_file_512;
-            this.pictureBox1.Location = new System.Drawing.Point(134, 64);
+            this.pictureBox1.Location = new System.Drawing.Point(65, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,7 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(432, 505);
+            this.ClientSize = new System.Drawing.Size(289, 424);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.label2);

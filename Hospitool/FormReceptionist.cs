@@ -21,7 +21,7 @@ namespace Hospitool
 
         private void FormReceptionist_Load(object sender, EventArgs e)
         {
-            label1.Text = "Welcome, "+receptionist.ReceptionistName + " " + receptionist.ReceptionistSurname;
+            label1.Text = receptionist.ReceptionistName + " " + receptionist.ReceptionistSurname +" " + "خوش آمدید,";
         }
 
         private void btnDeleteAppointment_Click(object sender, EventArgs e)

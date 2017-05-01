@@ -33,7 +33,7 @@ namespace Hospitool
 
         private void FormPatient_Load(object sender, EventArgs e)
         {
-            label1.Text = "Welcome," + patient.PatientName +" "+ patient.PatientSurname;
+            label1.Text = patient.PatientName + " "+ patient.PatientSurname +" "+"خوش آمدید," ;
         }
 
         private void btnPayment_Click(object sender, EventArgs e)

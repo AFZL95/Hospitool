@@ -101,7 +101,7 @@ namespace Hospitool
                 }
                 db.Appointments.Remove(temp);
                 db.SaveChanges();
-                MessageBox.Show("Appointment has been deleted.");
+                MessageBox.Show("قرار ملاقات با موفقیت حذف گردید.");
                 dateTimePicker1_ValueChanged(sender, e);
             }
         }

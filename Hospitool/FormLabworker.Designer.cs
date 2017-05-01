@@ -37,18 +37,19 @@
             // 
             // btnAddLabtest
             // 
-            this.btnAddLabtest.Location = new System.Drawing.Point(177, 278);
+            this.btnAddLabtest.Location = new System.Drawing.Point(57, 217);
             this.btnAddLabtest.Name = "btnAddLabtest";
-            this.btnAddLabtest.Size = new System.Drawing.Size(75, 23);
+            this.btnAddLabtest.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAddLabtest.Size = new System.Drawing.Size(139, 23);
             this.btnAddLabtest.TabIndex = 0;
-            this.btnAddLabtest.Text = "Add Labtest";
+            this.btnAddLabtest.Text = "اضافه کردن آزمایش";
             this.btnAddLabtest.UseVisualStyleBackColor = true;
             this.btnAddLabtest.Click += new System.EventHandler(this.btnAddLabtest_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 22);
+            this.label1.Location = new System.Drawing.Point(161, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
@@ -57,7 +58,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hospitool.Properties.Resources.test_tube;
-            this.pictureBox2.Location = new System.Drawing.Point(147, 132);
+            this.pictureBox2.Location = new System.Drawing.Point(57, 71);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(139, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,11 +67,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(177, 416);
+            this.btnExit.Location = new System.Drawing.Point(86, 260);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 18;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "خروج";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -79,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(428, 451);
+            this.ClientSize = new System.Drawing.Size(256, 308);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);

@@ -31,6 +31,8 @@ namespace Hospitool
             Form1 form = new Form1();
             //loginLabworker = form.loginLabworker2.LabworkerName;
             label1.Text = "Welcome, "+loginPersonel.LabworkerName + " "+ loginPersonel.LabworkerSurname;
+            label1.Text = loginPersonel.LabworkerName + " " + loginPersonel.LabworkerSurname + " " + "خوش آمدید,";
+
             Form1 loginForm = new Form1();
 
            

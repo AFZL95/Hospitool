@@ -113,5 +113,20 @@ namespace Hospitool
             cbField.Items.Add("Microbiologist");
             cbField.Items.Add("Neurologist");
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

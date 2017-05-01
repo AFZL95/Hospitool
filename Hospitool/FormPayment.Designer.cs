@@ -64,13 +64,13 @@
             this.groupBox1.Controls.Add(this.txtFirstName);
             this.groupBox1.Location = new System.Drawing.Point(12, 193);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(484, 478);
+            this.groupBox1.Size = new System.Drawing.Size(484, 326);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // txtExpiration
             // 
-            this.txtExpiration.Location = new System.Drawing.Point(235, 167);
+            this.txtExpiration.Location = new System.Drawing.Point(282, 127);
             this.txtExpiration.Name = "txtExpiration";
             this.txtExpiration.Size = new System.Drawing.Size(100, 20);
             this.txtExpiration.TabIndex = 13;
@@ -78,37 +78,40 @@
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(200, 273);
+            this.btnPay.Location = new System.Drawing.Point(31, 172);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(75, 23);
             this.btnPay.TabIndex = 12;
-            this.btnPay.Text = "Pay";
+            this.btnPay.Text = "پرداخت:";
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(156, 170);
+            this.label6.Location = new System.Drawing.Point(388, 130);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Expiration Date:";
+            this.label6.Text = "تاریخ انقضاء:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 209);
+            this.label5.Location = new System.Drawing.Point(391, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Cost:";
+            this.label5.Text = "هزینه:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(333, 127);
+            this.label4.Location = new System.Drawing.Point(107, 130);
             this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "CVV:";
@@ -116,63 +119,67 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 127);
+            this.label3.Location = new System.Drawing.Point(391, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Credit Card:";
+            this.label3.Text = "شماره کارت:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 46);
+            this.label2.Location = new System.Drawing.Point(187, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Last Name:";
+            this.label2.Text = "نام خانوادگی:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 46);
+            this.label1.Location = new System.Drawing.Point(391, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(23, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "First Name:";
+            this.label1.Text = "نام:";
             // 
             // txtCost
             // 
-            this.txtCost.Location = new System.Drawing.Point(65, 206);
+            this.txtCost.Location = new System.Drawing.Point(232, 172);
             this.txtCost.Name = "txtCost";
             this.txtCost.Size = new System.Drawing.Size(150, 20);
             this.txtCost.TabIndex = 5;
             // 
             // txtCVV
             // 
-            this.txtCVV.Location = new System.Drawing.Point(374, 124);
+            this.txtCVV.Location = new System.Drawing.Point(31, 127);
             this.txtCVV.Name = "txtCVV";
             this.txtCVV.Size = new System.Drawing.Size(70, 20);
             this.txtCVV.TabIndex = 3;
             // 
             // txtCreditcard
             // 
-            this.txtCreditcard.Location = new System.Drawing.Point(65, 124);
+            this.txtCreditcard.Location = new System.Drawing.Point(31, 81);
             this.txtCreditcard.Name = "txtCreditcard";
-            this.txtCreditcard.Size = new System.Drawing.Size(228, 20);
+            this.txtCreditcard.Size = new System.Drawing.Size(354, 20);
             this.txtCreditcard.TabIndex = 2;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(294, 43);
+            this.txtLastName.Location = new System.Drawing.Point(31, 35);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(150, 20);
             this.txtLastName.TabIndex = 1;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(65, 43);
+            this.txtFirstName.Location = new System.Drawing.Point(278, 32);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(150, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(107, 20);
             this.txtFirstName.TabIndex = 0;
             // 
             // pictureBox3
@@ -191,7 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(508, 531);
+            this.ClientSize = new System.Drawing.Size(508, 412);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormPayment";

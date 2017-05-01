@@ -26,14 +26,14 @@ namespace Hospitool
             if ( txtName.Text == "" || txtSurname.Text == "" || txtPassword.Text == "" ||
                 txtPhone1.Text == "" || txtTC.Text == "" ||  txtEmail.Text == "")
             {
-                MessageBox.Show("Textboxes with (*) cannot be empty!");
+                MessageBox.Show("بخش های ستاره دار بایستی تکمیل گردند!");
                 return;
             }
 
             int parsedValue;
             if (!int.TryParse(txtTC.Text, out parsedValue) || !int.TryParse(txtPhone1.Text, out parsedValue) )
             {
-                MessageBox.Show("TC, and Phone1 are number only fields!");
+                MessageBox.Show("شماره شناسایی و یا اطلاعات درست وارد نشده اند!");
                 return;
             }
 
@@ -94,6 +94,16 @@ namespace Hospitool
         }
 
         private void FormSignupAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhone1_TextChanged(object sender, EventArgs e)
         {
 
         }

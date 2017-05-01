@@ -46,7 +46,7 @@
             // cbDoctors
             // 
             this.cbDoctors.FormattingEnabled = true;
-            this.cbDoctors.Location = new System.Drawing.Point(52, 167);
+            this.cbDoctors.Location = new System.Drawing.Point(665, 51);
             this.cbDoctors.Name = "cbDoctors";
             this.cbDoctors.Size = new System.Drawing.Size(121, 21);
             this.cbDoctors.TabIndex = 0;
@@ -54,18 +54,19 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(198, 378);
+            this.btnDelete.Location = new System.Drawing.Point(12, 22);
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "حذف";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cbHours
             // 
             this.cbHours.FormattingEnabled = true;
-            this.cbHours.Location = new System.Drawing.Point(177, 300);
+            this.cbHours.Location = new System.Drawing.Point(118, 51);
             this.cbHours.Name = "cbHours";
             this.cbHours.Size = new System.Drawing.Size(121, 21);
             this.cbHours.TabIndex = 4;
@@ -73,7 +74,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(273, 168);
+            this.dateTimePicker1.Location = new System.Drawing.Point(349, 52);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
             this.dateTimePicker1.TabIndex = 5;
@@ -82,35 +83,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 151);
+            this.label1.Location = new System.Drawing.Point(675, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Select A Doctor";
+            this.label1.Text = "انتخاب پزشک مورد نظر:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(281, 152);
+            this.label2.Location = new System.Drawing.Point(452, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Select Day";
+            this.label2.Text = "قرار ملاقات، مورخ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(174, 284);
+            this.label3.Location = new System.Drawing.Point(171, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Select Hour";
+            this.label3.Text = "ساعت ملاقات:";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Hospitool.Properties.Resources.clock_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(177, 231);
+            this.pictureBox3.Location = new System.Drawing.Point(248, 22);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +124,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hospitool.Properties.Resources.calendar;
-            this.pictureBox2.Location = new System.Drawing.Point(284, 86);
+            this.pictureBox2.Location = new System.Drawing.Point(552, 22);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +134,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hospitool.Properties.Resources.icon_surgeon_add;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(792, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(507, 498);
+            this.ClientSize = new System.Drawing.Size(903, 86);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

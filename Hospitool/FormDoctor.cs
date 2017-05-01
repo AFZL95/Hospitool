@@ -27,7 +27,9 @@ namespace Hospitool
 
         private void FormDoctor_Load(object sender, EventArgs e)
         {
-            label1.Text = "Welcome, " + doctor.DoctorName + " " + doctor.DoctorSurname;
+            label1.Text = doctor.DoctorName + " " + doctor.DoctorSurname + " " + "خوش آمدید,";
+
+            
         }
 
         private void btnLabtestResult_Click(object sender, EventArgs e)

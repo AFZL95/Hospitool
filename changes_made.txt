@@ -1,1 +1,4 @@
 in Form1.cs in line  139
+
+FormDoctorSeeLabtest in line 77 must be changed.
+FormPatient in line 54 must be changed.

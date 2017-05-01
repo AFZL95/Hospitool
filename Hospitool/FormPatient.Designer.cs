@@ -45,16 +45,16 @@
             // 
             this.btnAppointment.Location = new System.Drawing.Point(83, 219);
             this.btnAppointment.Name = "btnAppointment";
-            this.btnAppointment.Size = new System.Drawing.Size(132, 26);
+            this.btnAppointment.Size = new System.Drawing.Size(139, 26);
             this.btnAppointment.TabIndex = 0;
-            this.btnAppointment.Text = "Make an Appointment";
+            this.btnAppointment.Text = "رزرو قرار ملاقات";
             this.btnAppointment.UseVisualStyleBackColor = true;
             this.btnAppointment.Click += new System.EventHandler(this.btnAppointment_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 27);
+            this.label1.Location = new System.Drawing.Point(787, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
@@ -62,28 +62,28 @@
             // 
             // btnTestResults
             // 
-            this.btnTestResults.Location = new System.Drawing.Point(352, 222);
+            this.btnTestResults.Location = new System.Drawing.Point(345, 222);
             this.btnTestResults.Name = "btnTestResults";
-            this.btnTestResults.Size = new System.Drawing.Size(132, 23);
+            this.btnTestResults.Size = new System.Drawing.Size(139, 23);
             this.btnTestResults.TabIndex = 2;
-            this.btnTestResults.Text = "See Test Results";
+            this.btnTestResults.Text = "نتایج آزمایش من";
             this.btnTestResults.UseVisualStyleBackColor = true;
             this.btnTestResults.Click += new System.EventHandler(this.btnTestResults_Click);
             // 
             // btnPayment
             // 
-            this.btnPayment.Location = new System.Drawing.Point(212, 500);
+            this.btnPayment.Location = new System.Drawing.Point(611, 222);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(132, 23);
+            this.btnPayment.Size = new System.Drawing.Size(139, 23);
             this.btnPayment.TabIndex = 3;
-            this.btnPayment.Text = "Payment";
+            this.btnPayment.Text = "پرداخت";
             this.btnPayment.UseVisualStyleBackColor = true;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Hospitool.Properties.Resources.Money;
-            this.pictureBox3.Location = new System.Drawing.Point(212, 354);
+            this.pictureBox3.Location = new System.Drawing.Point(611, 73);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(139, 140);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,11 +112,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(242, 589);
+            this.btnExit.Location = new System.Drawing.Point(12, 295);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 18;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "خروج";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -125,7 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(555, 624);
+            this.ClientSize = new System.Drawing.Size(851, 337);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

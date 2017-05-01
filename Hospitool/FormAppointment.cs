@@ -105,7 +105,7 @@ namespace Hospitool
         {
             if(cbDoctors.Text == "" || cbField.Text == "")
             {
-                MessageBox.Show("Choose a field and a doctor.");
+                MessageBox.Show("لطفا یک تخصص و نام پزشک مربوطه را انتخاب کنید.");
                 return;
             }
             /*
@@ -143,7 +143,7 @@ namespace Hospitool
                            
             appointment.AppointmentDate = date;
 
-            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("آیا مطمئن هستید؟", "", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 serviceAppointment.Create(appointment);
@@ -157,7 +157,7 @@ namespace Hospitool
             button.BackColor = Color.Red;
             button.Enabled = false;
 
-            MessageBox.Show("Success!");
+            MessageBox.Show("وقت ملاقات شما با موفقیت ثبت شد!");
             
         }
 
