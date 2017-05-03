@@ -51,12 +51,12 @@ namespace Hospitool
             newlabtest = labtest.Find(x => x.PatientID == patient.PatientID);
             if (newlabtest != null) { 
                 myArrayOfBytes = newlabtest.LabtestStoredFile;
-                File.WriteAllBytes(@"C:\Users\Ibrahim\Desktop\Hospitool\Hospitool\Hospitool\Resources\Labtest" + newlabtest.PatientID + ".pdf", myArrayOfBytes);
-                Process.Start(@"C:\Users\Ibrahim\Desktop\Hospitool\Hospitool\Hospitool\Resources\Labtest" + newlabtest.PatientID + ".pdf");
+                File.WriteAllBytes(@"C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\Resources\Labtest" + newlabtest.PatientID + ".pdf", myArrayOfBytes);
+                Process.Start(@"C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\Resources\Labtest" + newlabtest.PatientID + ".pdf");
             }
             else
             {
-                MessageBox.Show("There is no available lab test.");
+                MessageBox.Show("نتیجه آزمایشی موجود نیست.");
             }
         }
 

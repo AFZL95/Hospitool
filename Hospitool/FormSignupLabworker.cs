@@ -26,14 +26,14 @@ namespace Hospitool
             if (txtAddress1.Text == "" || txtName.Text == "" || txtSurname.Text == "" || txtPassword.Text == "" ||
                 txtPhone1.Text == "" || txtTC.Text == "" || txtAge.Text == "" || txtEmail.Text == "")
             {
-                MessageBox.Show("Textboxes with (*) cannot be empty!");
+                MessageBox.Show("بخش های ستاره دار بایستی تکمیل گردند!");
                 return;
             }
 
             int parsedValue;
             if (!int.TryParse(txtTC.Text, out parsedValue) || !int.TryParse(txtPhone1.Text, out parsedValue) || !int.TryParse(txtAge.Text, out parsedValue))
             {
-                MessageBox.Show("TC, Phone1, and Age are number only fields!");
+                MessageBox.Show("شماره شناسایی یا اطلاعات وارد شده بصورت صحیح وارد نشده اند!");
                 return;
             }
 

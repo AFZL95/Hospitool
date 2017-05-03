@@ -9,22 +9,22 @@ namespace Hospitool.Service
     public class LabtestService
     {
         HospitoolEntities db = new HospitoolEntities();
-        //public void Create(Labtest labtest)
-        //{
-        //    db.Labtests.Add(labtest);
+        public void Create(Labtest labtest)
+          {
+            db.Labtests.Add(labtest);
 
-        //    Patient patient = db.Patients.Find(labtest.PatientID);
+            Patient patient = db.Patients.Find(labtest.PatientID);
 
-        //    db.SaveChanges();
-        //}
-
+            db.SaveChanges();
+        }
+    /*
         public void Create(Labtest labtest)
         {
             db.Labtests.Add(labtest);
             db.SaveChanges();
 
         }
-
+        */
 
         public void Update(Labtest labtest)
         {

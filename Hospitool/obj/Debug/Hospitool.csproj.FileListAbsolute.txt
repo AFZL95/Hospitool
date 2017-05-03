@@ -95,8 +95,6 @@ C:\Users\FZL\Desktop\Hospitool_FA\Hospitool\obj\Debug\Hospitool.FormSignupRecept
 C:\Users\FZL\Desktop\Hospitool_FA\Hospitool\obj\Debug\Hospitool.Properties.Resources.resources
 C:\Users\FZL\Desktop\Hospitool_FA\Hospitool\obj\Debug\Hospitool.csproj.GenerateResource.Cache
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\Hospitool.exe.config
-C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.exe
-C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.pdb
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\Hospitool.exe
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\Hospitool.pdb
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\EASendMail45.dll
@@ -125,3 +123,5 @@ C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.FormSignu
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.FormSignupReceptionist.resources
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.Properties.Resources.resources
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.csproj.GenerateResource.Cache
+C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.exe
+C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.pdb

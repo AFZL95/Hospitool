@@ -246,6 +246,15 @@
     <Compile Include="Service\PatientService.cs" />
     <Compile Include="Service\PaymentService.cs" />
     <Compile Include="Service\ReceptionistService.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>HospitoolDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>HospitoolDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>HospitoolDatabase.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -19,6 +19,7 @@
         <AssociationConnector Association="HospitoolModel.FK_Appointment_Patient" />
         <EntityTypeShape EntityType="HospitoolModel.Payment" Width="1.5" PointX="8.75" PointY="5" />
         <AssociationConnector Association="HospitoolModel.FK_Payment_Patient" />
+        <EntityTypeShape EntityType="HospitoolModel.sysdiagram" Width="1.5" PointX="7.375" PointY="8.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

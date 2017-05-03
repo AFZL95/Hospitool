@@ -10,7 +10,7 @@
     <Property Name="AdminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="AdminSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="AdminEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="AdminMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AdminMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="Bed">
     <Key>
@@ -19,9 +19,9 @@
     <Property Name="BedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PatientID" Type="Int32" Nullable="false" />
     <Property Name="ReceptionistID" Type="Int32" Nullable="false" />
-    <Property Name="BedRentSDate" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="BedRentEDate" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="BedRegDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="BedRentSDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BedRentEDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BedRegDate" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
   <EntityType Name="Doctor">
     <Key>
@@ -33,9 +33,9 @@
     <Property Name="DoctorTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DoctorAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DoctorAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="DoctorMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="DoctorMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-    <Property Name="DoctorGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DoctorMobile1" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+    <Property Name="DoctorMobile2" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+    <Property Name="DoctorGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DoctorAge" Type="Int32" Nullable="false" />
     <Property Name="DoctorEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DoctorField" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
@@ -52,9 +52,9 @@
     <Property Name="LabworkerTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabworkerAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabworkerAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="LabworkerMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="LabworkerMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-    <Property Name="LabworkerGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LabworkerMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LabworkerMobile2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LabworkerGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabworkerAge" Type="Int32" Nullable="false" />
     <Property Name="LabworkerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabworkerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -70,11 +70,11 @@
     <Property Name="PatientTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PatientAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PatientAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="PatientMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="PatientMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-    <Property Name="PatientGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="PatientDateAdmitted" Type="DateTime" Precision="7" />
-    <Property Name="PatientDateDischarged" Type="DateTime" Precision="7" />
+    <Property Name="PatientMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PatientMobile2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PatientGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PatientDateAdmitted" Type="DateTime" Precision="3" />
+    <Property Name="PatientDateDischarged" Type="DateTime" Precision="3" />
     <Property Name="PatientAge" Type="Int32" Nullable="false" />
     <Property Name="PatientEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PatientIsDischarged" Type="Boolean" />
@@ -93,9 +93,9 @@
     <Property Name="ReceptionistTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ReceptionistAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ReceptionistAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="ReceptionistMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ReceptionistMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-    <Property Name="ReceptionistGender" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ReceptionistMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ReceptionistMobile2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReceptionistGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ReceptionistAge" Type="Int32" Nullable="false" />
     <Property Name="ReceptionistEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ReceptionistPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -130,13 +130,44 @@
       <End Role="Patient" EntitySet="Patients" />
       <End Role="Payment" EntitySet="Payments" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="HospitoolModel.sysdiagram" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(HospitoolModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(HospitoolModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
   <EntityType Name="Labtest">
     <Key>
       <PropertyRef Name="LabtestID" />
     </Key>
     <Property Name="LabtestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="LabtestDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LabtestDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="PatientID" Type="Int32" Nullable="false" />
     <Property Name="LabworkerID" Type="Int32" Nullable="false" />
     <Property Name="LabtestStoredFile" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
@@ -176,8 +207,8 @@
     <Property Name="DoctorID" Type="Int32" Nullable="false" />
     <Property Name="PatientID" Type="Int32" Nullable="false" />
     <Property Name="AppointmentDate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="AppointmentStartdate" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Name="AppointmentEnddate" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AppointmentStartdate" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AppointmentEnddate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Doctor" Relationship="HospitoolModel.FK_Appointment_Doctor" FromRole="Appointment" ToRole="Doctor" />
     <NavigationProperty Name="Patient" Relationship="HospitoolModel.FK_Appointment_Patient" FromRole="Appointment" ToRole="Patient" />
   </EntityType>
@@ -231,4 +262,25 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>

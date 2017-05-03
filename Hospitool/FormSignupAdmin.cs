@@ -33,7 +33,7 @@ namespace Hospitool
             int parsedValue;
             if (!int.TryParse(txtTC.Text, out parsedValue) || !int.TryParse(txtPhone1.Text, out parsedValue) )
             {
-                MessageBox.Show("شماره شناسایی و یا اطلاعات درست وارد نشده اند!");
+                MessageBox.Show("شماره شناسایی یا اطلاعات وارد شده بصورت صحیح وارد نشده اند!");
                 return;
             }
 
