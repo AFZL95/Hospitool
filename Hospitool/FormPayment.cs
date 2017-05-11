@@ -59,7 +59,7 @@ namespace Hospitool
             payment.PaymentExpiration = txtExpiration.Text;
             payment.PaymentCost = Int32.Parse(txtCost.Text);
             payment.PatientID = patient.PatientID;
-           
+          
 
 
         }

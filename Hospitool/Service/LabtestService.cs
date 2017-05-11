@@ -23,8 +23,8 @@ namespace Hospitool.Service
             db.Labtests.Add(labtest);
             db.SaveChanges();
 
-        }
-        */
+        }*/
+        
 
         public void Update(Labtest labtest)
         {

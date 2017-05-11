@@ -37,10 +37,6 @@ namespace Hospitool.Service
             updateAdmin.AdminMobile1 = admin.AdminMobile1;
             updateAdmin.AdminEmail = admin.AdminEmail;
             
-            //if (!string.IsNullOrEmpty(car.Photo))
-            //{
-            //    updateCar.Photo = car.Photo;
-            //}
             db.SaveChanges();
         }
         public void Delete(Admin admin)

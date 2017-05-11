@@ -102,7 +102,6 @@ C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\EntityFramework.dll
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\EntityFramework.xml
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.csprojResolveAssemblyReference.cache
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.Form1.resources
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.FormAdmin.resources
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.FormAppointment.resources
@@ -125,3 +124,4 @@ C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.Propertie
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.csproj.GenerateResource.Cache
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.exe
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.pdb
+C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.csprojResolveAssemblyReference.cache

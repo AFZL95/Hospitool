@@ -17,7 +17,7 @@ namespace Hospitool
         public Patient patient;
         HospitoolEntities db = new HospitoolEntities();
         public FormPatient(Patient newpatient)
-        {
+        {  
             InitializeComponent();
             //f1 = ParentForm;
             patient = newpatient;

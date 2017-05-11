@@ -21,7 +21,6 @@ namespace Hospitool
         public Form1()
         {
             InitializeComponent();
-            //Patient loginPatient = new Patient();
         
             
         }
