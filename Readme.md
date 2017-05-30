@@ -29,7 +29,7 @@ you can go to the next level!
 First, you should create a database in MSSQL with the exact name of "Hospitool".
 The second thing that you should do is you Browse the "Hospitool.sln" and find the "HospitoolDatabase.edmx" part in the solution Explorer area. open it. and in the main area right-click on the blank area and choose " like the figure shown below:
  
-![Regenerating](https://github.com/AFZL95/Hospitool/Ducuments/img/regenerating.png)
+![Regenerating](https://github.com/AFZL95/Hospitool/blob/master/Ducuments/img/regenerating.png)
 
 ## Authenticating
 for the first time access to the app, use these credentials:
