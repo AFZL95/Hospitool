@@ -10,18 +10,7 @@
     <Property Name="AdminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="AdminSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="AdminEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="AdminMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Bed">
-    <Key>
-      <PropertyRef Name="BedID" />
-    </Key>
-    <Property Name="BedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PatientID" Type="Int32" Nullable="false" />
-    <Property Name="ReceptionistID" Type="Int32" Nullable="false" />
-    <Property Name="BedRentSDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="BedRentEDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="BedRegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdminMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="Doctor">
     <Key>
@@ -33,8 +22,8 @@
     <Property Name="DoctorTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DoctorAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DoctorAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="DoctorMobile1" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
-    <Property Name="DoctorMobile2" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+    <Property Name="DoctorMobile1" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="DoctorMobile2" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
     <Property Name="DoctorGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DoctorAge" Type="Int32" Nullable="false" />
     <Property Name="DoctorEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
@@ -52,8 +41,8 @@
     <Property Name="LabworkerTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabworkerAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabworkerAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="LabworkerMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="LabworkerMobile2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LabworkerMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LabworkerMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="LabworkerGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabworkerAge" Type="Int32" Nullable="false" />
     <Property Name="LabworkerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
@@ -70,8 +59,8 @@
     <Property Name="PatientTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PatientAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PatientAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="PatientMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="PatientMobile2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PatientMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PatientMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="PatientGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PatientDateAdmitted" Type="DateTime" Precision="3" />
     <Property Name="PatientDateDischarged" Type="DateTime" Precision="3" />
@@ -93,8 +82,8 @@
     <Property Name="ReceptionistTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ReceptionistAddress1" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ReceptionistAddress2" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="ReceptionistMobile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ReceptionistMobile2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReceptionistMobile1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ReceptionistMobile2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="ReceptionistGender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ReceptionistAge" Type="Int32" Nullable="false" />
     <Property Name="ReceptionistEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
@@ -102,7 +91,6 @@
   </EntityType>
   <EntityContainer Name="HospitoolEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Admins" EntityType="Self.Admin" />
-    <EntitySet Name="Beds" EntityType="Self.Bed" />
     <EntitySet Name="Doctors" EntityType="Self.Doctor" />
     <EntitySet Name="Labworkers" EntityType="Self.Labworker" />
     <EntitySet Name="Patients" EntityType="Self.Patient" />

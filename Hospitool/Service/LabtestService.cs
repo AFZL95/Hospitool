@@ -32,16 +32,6 @@ namespace Hospitool.Service
             Labtest updateLabtest = db.Labtests.Where(c => c.LabtestID == labtest.LabtestID).FirstOrDefault();
 
             updateLabtest.LabtestDate = DateTime.Now;
-            //updateLabtest.AdminSurname = admin.AdminSurname;
-            //updateLabtest.AdminPassword = admin.AdminPassword;
-            //updateLabtest.AdminTC = admin.AdminTC;
-            //updateLabtest.AdminMobile1 = admin.AdminMobile1;
-            //updateLabtest.AdminEmail = admin.AdminEmail;
-
-            //if (!string.IsNullOrEmpty(car.Photo))
-            //{
-            //    updateCar.Photo = car.Photo;
-            //}
             db.SaveChanges();
         }
 

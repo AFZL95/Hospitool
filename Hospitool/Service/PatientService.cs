@@ -46,10 +46,7 @@ namespace Hospitool.Service
             updatePatient.PatientEmail = patient.PatientEmail;
             updatePatient.PatientDateAdmitted = patient.PatientDateAdmitted;
             updatePatient.PatientDateDischarged = patient.PatientDateDischarged;
-            //if (!string.IsNullOrEmpty(car.Photo))
-            //{
-            //    updateCar.Photo = car.Photo;
-            //}
+     
             db.SaveChanges();
         }
         public void Delete(Patient patient)

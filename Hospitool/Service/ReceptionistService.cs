@@ -48,10 +48,6 @@ namespace Hospitool.Service
             updateReceptionist.ReceptionistAddress2 = receptionist.ReceptionistAddress2;
             updateReceptionist.ReceptionistEmail = receptionist.ReceptionistEmail;
             
-            //if (!string.IsNullOrEmpty(car.Photo))
-            //{
-            //    updateCar.Photo = car.Photo;
-            //}
             db.SaveChanges();
         }
         public void Delete(Receptionist receptionist)

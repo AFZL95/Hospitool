@@ -10,7 +10,7 @@
     <Property Name="AdminName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="AdminSurname" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="AdminEmail" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="AdminMobile1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AdminMobile1" Type="nvarchar" MaxLength="25" Nullable="false" />
   </EntityType>
   <EntityType Name="Appointments">
     <Key>
@@ -23,17 +23,6 @@
     <Property Name="AppointmentStartdate" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="AppointmentEnddate" Type="varchar" MaxLength="30" />
   </EntityType>
-  <EntityType Name="Beds">
-    <Key>
-      <PropertyRef Name="BedID" />
-    </Key>
-    <Property Name="BedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="PatientID" Type="int" Nullable="false" />
-    <Property Name="ReceptionistID" Type="int" Nullable="false" />
-    <Property Name="BedRentSDate" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="BedRentEDate" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="BedRegDate" Type="datetime" Nullable="false" />
-  </EntityType>
   <EntityType Name="Doctors">
     <Key>
       <PropertyRef Name="DoctorID" />
@@ -44,8 +33,8 @@
     <Property Name="DoctorTC" Type="nvarchar" MaxLength="11" Nullable="false" />
     <Property Name="DoctorAddress1" Type="nvarchar" MaxLength="400" Nullable="false" />
     <Property Name="DoctorAddress2" Type="nvarchar" MaxLength="400" />
-    <Property Name="DoctorMobile1" Type="nvarchar" MaxLength="12" Nullable="false" />
-    <Property Name="DoctorMobile2" Type="nvarchar" MaxLength="12" />
+    <Property Name="DoctorMobile1" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DoctorMobile2" Type="nvarchar" MaxLength="25" />
     <Property Name="DoctorGender" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="DoctorAge" Type="int" Nullable="false" />
     <Property Name="DoctorEmail" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -73,8 +62,8 @@
     <Property Name="LabworkerTC" Type="nvarchar" MaxLength="11" Nullable="false" />
     <Property Name="LabworkerAddress1" Type="nvarchar" MaxLength="400" Nullable="false" />
     <Property Name="LabworkerAddress2" Type="nvarchar" MaxLength="400" />
-    <Property Name="LabworkerMobile1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LabworkerMobile2" Type="nvarchar(max)" />
+    <Property Name="LabworkerMobile1" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="LabworkerMobile2" Type="nvarchar" MaxLength="25" />
     <Property Name="LabworkerGender" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="LabworkerAge" Type="int" Nullable="false" />
     <Property Name="LabworkerEmail" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -90,8 +79,8 @@
     <Property Name="PatientTC" Type="nvarchar" MaxLength="11" Nullable="false" />
     <Property Name="PatientAddress1" Type="nvarchar" MaxLength="400" Nullable="false" />
     <Property Name="PatientAddress2" Type="nvarchar" MaxLength="400" />
-    <Property Name="PatientMobile1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PatientMobile2" Type="nvarchar(max)" />
+    <Property Name="PatientMobile1" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="PatientMobile2" Type="nvarchar" MaxLength="25" />
     <Property Name="PatientGender" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="PatientDateAdmitted" Type="datetime" />
     <Property Name="PatientDateDischarged" Type="datetime" />
@@ -123,8 +112,8 @@
     <Property Name="ReceptionistTC" Type="nvarchar" MaxLength="11" Nullable="false" />
     <Property Name="ReceptionistAddress1" Type="nvarchar" MaxLength="400" Nullable="false" />
     <Property Name="ReceptionistAddress2" Type="nvarchar" MaxLength="400" />
-    <Property Name="ReceptionistMobile1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ReceptionistMobile2" Type="nvarchar(max)" />
+    <Property Name="ReceptionistMobile1" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ReceptionistMobile2" Type="nvarchar" MaxLength="25" />
     <Property Name="ReceptionistGender" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="ReceptionistAge" Type="int" Nullable="false" />
     <Property Name="ReceptionistEmail" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -234,7 +223,6 @@
   <EntityContainer Name="HospitoolModelStoreContainer">
     <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Appointments" EntityType="Self.Appointments" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Beds" EntityType="Self.Beds" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Labtests" EntityType="Self.Labtests" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Labworkers" EntityType="Self.Labworkers" Schema="dbo" store:Type="Tables" />

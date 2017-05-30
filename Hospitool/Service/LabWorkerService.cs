@@ -47,11 +47,7 @@ namespace Hospitool.Service
             updateLabworker.LabworkerAddress1 = labworker.LabworkerAddress1;
             updateLabworker.LabworkerAddress2 = labworker.LabworkerAddress2;
             updateLabworker.LabworkerEmail = labworker.LabworkerEmail;
-            
-            //if (!string.IsNullOrEmpty(car.Photo))
-            //{
-            //    updateCar.Photo = car.Photo;
-            //}
+         
             db.SaveChanges();
         }
         public void Delete(Labworker labworker)

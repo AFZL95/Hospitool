@@ -125,3 +125,6 @@ C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.csproj.Ge
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.exe
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.pdb
 C:\Users\FZL\Desktop\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.csprojResolveAssemblyReference.cache
+E:\Hospitool\Hospitool\Hospitool\bin\Debug\Hospitool.exe.config
+E:\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.exe
+E:\Hospitool\Hospitool\Hospitool\obj\Debug\Hospitool.pdb

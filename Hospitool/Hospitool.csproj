@@ -82,9 +82,6 @@
     <Compile Include="Appointment.cs">
       <DependentUpon>HospitoolDatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bed.cs">
-      <DependentUpon>HospitoolDatabase.tt</DependentUpon>
-    </Compile>
     <Compile Include="Doctor.cs">
       <DependentUpon>HospitoolDatabase.tt</DependentUpon>
     </Compile>

@@ -14,18 +14,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Beds">
-      <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Bed)">
-        <MappingFragment StoreEntitySet="Beds">
-          <ScalarProperty Name="BedID" ColumnName="BedID" />
-          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
-          <ScalarProperty Name="ReceptionistID" ColumnName="ReceptionistID" />
-          <ScalarProperty Name="BedRentSDate" ColumnName="BedRentSDate" />
-          <ScalarProperty Name="BedRentEDate" ColumnName="BedRentEDate" />
-          <ScalarProperty Name="BedRegDate" ColumnName="BedRegDate" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Doctors">
       <EntityTypeMapping TypeName="IsTypeOf(HospitoolModel.Doctor)">
         <MappingFragment StoreEntitySet="Doctors">

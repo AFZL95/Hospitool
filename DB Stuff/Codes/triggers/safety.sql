@@ -1,0 +1,25 @@
+USE [Hospitool]
+GO
+
+/****** Object:  DdlTrigger [safety]    Script Date: 5/14/2017 11:15:56 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TRIGGER [safety]
+ON DATABASE
+FOR DROP_TABLE, ALTER_TABLE
+AS
+	PRINT 'U DO NOT HAVE PERMISSION To Delete!'
+	ROLLBACK;
+
+
+GO
+
+ENABLE TRIGGER [safety] ON DATABASE
+GO
+
+

@@ -28,7 +28,6 @@ namespace Hospitool
         }
     
         public virtual DbSet<Admin> Admins { get; set; }
-        public virtual DbSet<Bed> Beds { get; set; }
         public virtual DbSet<Doctor> Doctors { get; set; }
         public virtual DbSet<Labworker> Labworkers { get; set; }
         public virtual DbSet<Patient> Patients { get; set; }
