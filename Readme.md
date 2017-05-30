@@ -43,4 +43,8 @@ access type: Admin
 
 Translating the whole project in English in the case of ability to eat this ugly frog!
 
+## anything else?
+
+Feel free to contribute, it's good to be mention that there is a complete and comprehensive report file in the Ducument folder (in Persian :||)
+
  
