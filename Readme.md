@@ -1,12 +1,12 @@
-# Hospitool = Hospital + Tool
-![Hospitool](https://github.com/AFZL95/Hospitool/Ducuments/img/logo.png)
+# Hospitool 
+![Hospitool](/Hospitool/Ducuments/img/logo.png)
 
 as the name says, it's Complete Hospital Management tools that facilitate the whole administrative and medical procedures simultaneously.
 
 
 ## Requirements:
 
-1. one Computer!
+1. One Computer!
 2. MSSQL server (Complete or Elite version) for preserving and managing our DataBase
 3.  MS Visual Studio (For editing or contributing :)) 
 
