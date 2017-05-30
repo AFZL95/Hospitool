@@ -1,5 +1,6 @@
 # Hospitool 
-![Hospitool](/Hospitool/Ducuments/img/logo.png)
+
+![alt text](https://github.com/AFZL95/Hospitool/Ducuments/img/logo.png "Hospitool")
 
 as the name says, it's Complete Hospital Management tools that facilitate the whole administrative and medical procedures simultaneously.
 
